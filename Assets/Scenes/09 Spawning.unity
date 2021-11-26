@@ -284,6 +284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1229805171}
   - component: {fileID: 1229805172}
+  - component: {fileID: 1229805173}
   m_Layer: 0
   m_Name: SpawnMachine
   m_TagString: Untagged
@@ -312,13 +313,34 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229805170}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20feec136eb9a5a44bc458e7a3c0dea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8079430274417712710, guid: eae6928dea6691a4cb670db41d1ab736, type: 3}
-  startSpnTimer: 5
+  initialSpnIntrvl: 2
+  minspnIntrvl: 0.9
+  spnTimeReductn: 0.02
+--- !u!114 &1229805173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229805170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bdd199e00248842b14f0b4a1bf5510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enmPtrn:
+  - {fileID: 6219344815879466505, guid: 7d12963590f8fd14c96ce39233077d06, type: 3}
+  - {fileID: 5436745414997671475, guid: bdefb7e0bca5ea64e9c76c1e28955ac4, type: 3}
+  - {fileID: 2132054036478405342, guid: c833b31d6ec9db74e92fbfed16c6d124, type: 3}
+  initialSpnIntrvl: 2.5
+  minspnIntrvl: 0.9
+  spnTimeReductn: 0.03
 --- !u!1001 &1922122937
 PrefabInstance:
   m_ObjectHideFlags: 0
