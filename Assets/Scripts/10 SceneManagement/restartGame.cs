@@ -13,12 +13,13 @@ public class restartGame : MonoBehaviour
     public float maxY;
     public float minY;
     public int health;
+    public GameObject deathEffect;
 
     private void Update()
     {
         if (health <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            playerDead();
         }
         transform.position = Vector2.MoveTowards(transform.position, targt, speed * Time.deltaTime);
 
@@ -31,5 +32,16 @@ public class restartGame : MonoBehaviour
             targt = new Vector2(transform.position.x, transform.position.y - Ymovement);
             transform.position = targt;
         }
+
+        void playerDead()
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+
+        /*void restart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }*/
     }
 }
